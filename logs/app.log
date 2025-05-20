@@ -1,0 +1,17 @@
+2025-05-20 19:30:47.245 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-20 19:30:52.249 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-20 19:32:49.912 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:33:31.503 | INFO     | src.app:display_page:71 - Navigating to: /about
+2025-05-20 19:33:36.491 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:33:37.364 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-20 19:33:38.856 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:33:39.297 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-20 19:33:40.641 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:33:40.975 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-20 19:33:42.385 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:38:02.754 | INFO     | src.app:perform_search:116 - Performing search: VILIP-2 (type: protein)
+2025-05-20 19:41:56.657 | INFO     | src.app:display_page:71 - Navigating to: /about
+2025-05-20 19:43:42.806 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:46:40.823 | INFO     | src.app:display_page:71 - Navigating to: /about
+2025-05-20 19:46:44.269 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 19:46:48.241 | INFO     | src.app:perform_search:116 - Performing search: sffyjar (type: protein)

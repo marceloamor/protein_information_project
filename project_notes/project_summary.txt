@@ -1,0 +1,35 @@
+# Biographica Protein Information Project - Summary
+
+## Project Structure
+- Created a modular structure with src/ containing data/, components/, and pages/
+- Moved parquet files to data/ directory
+- Set up Poetry for dependency management
+- Implemented logging with loguru
+
+## Data Files (in data/ directory)
+- protein_nodes.parquet: 27,768 rows with protein information (id, name, sequence, etc.)
+- go_term_nodes.parquet: 9,594 rows with GO term information (go_id, name, namespace, etc.)
+- edges.parquet: 498,731 rows of relationships (FunctionalAnnotation or ProteinProteinInteraction)
+- protein_id_records.parquet: 27,768 rows mapping UUIDs to secondary identifiers
+
+## Key Components Created
+- DataLoader class to handle parquet loading and provide search functionality
+- Dash application with Bootstrap styling for the user interface
+- Components for protein and GO term display
+- Network visualization of protein-protein interactions using Dash Cytoscape
+- Page layouts for home, search results, protein details, and about page
+
+## Technical Challenges
+- Dependency issues with PyArrow installation on WSL
+- Workarounds implemented:
+  - Modified DataLoader to use DuckDB for parquet file loading
+  - Updated DataLoader to handle inconsistencies in the data model
+  - Added robust handling for cases where protein IDs exist in edges but not in protein_id_records
+  - Created installation script to use pre-built wheels
+
+## Next Steps
+1. Complete testing of the enhanced DataLoader
+2. Ensure proper functioning of the Dash application
+3. Add more advanced search functionality
+4. Enhance network visualization capabilities
+5. Improve UI/UX based on user feedback 
