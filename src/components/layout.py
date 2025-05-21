@@ -13,7 +13,7 @@ def create_navbar():
                 dbc.NavbarBrand(
                     [
                         html.Img(
-                            src="/assets/protein_icon.png",
+                            src="/assets/favicon.ico",
                             height="30px",
                             className="me-2",
                         ),

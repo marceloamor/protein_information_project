@@ -15,3 +15,20 @@
 2025-05-20 19:46:40.823 | INFO     | src.app:display_page:71 - Navigating to: /about
 2025-05-20 19:46:44.269 | INFO     | src.app:display_page:71 - Navigating to: /
 2025-05-20 19:46:48.241 | INFO     | src.app:perform_search:116 - Performing search: sffyjar (type: protein)
+2025-05-20 20:12:22.506 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-20 20:12:37.527 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-20 20:12:44.519 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-20 20:12:48.016 | INFO     | src.app:perform_search:116 - Performing search: edb7a0a0-b7d6-5f2d-b2eb-8f91f17aa5ca (type: protein)
+2025-05-21 10:04:50.018 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 10:04:55.317 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 10:05:01.811 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 10:06:06.401 | INFO     | src.app:perform_search:116 - Performing search: sfgjf (type: protein)
+2025-05-21 11:40:18.780 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 11:40:24.230 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 13:03:07.130 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 13:03:11.946 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 13:03:23.709 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 13:05:15.413 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 13:05:27.291 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 13:05:31.320 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 13:05:48.943 | INFO     | src.app:display_page:71 - Navigating to: /
