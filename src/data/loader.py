@@ -28,6 +28,7 @@ class DataLoader:
         self.id_to_details = {}  # Map protein IDs to details
         self.uuid_to_ids = {}    # Map UUIDs to protein IDs
         self.identifier_to_ids = {}  # Map all identifiers to protein IDs
+        self.name_to_ids = {}    # Map protein names to protein IDs
         
         # Constants for the data model
         self.FUNCTIONAL_ANNOTATION_TYPES = [
@@ -72,12 +73,31 @@ class DataLoader:
         # First, map each protein ID to its details from protein_nodes
         for _, row in self.protein_nodes.iterrows():
             protein_id = row['id']
+            name = row.get('name')
             self.id_to_details[protein_id] = row.to_dict()
+            
+            # Add protein_id to identifier_to_ids map
+            if protein_id not in self.identifier_to_ids:
+                self.identifier_to_ids[protein_id] = [protein_id]
+            
+            # Map protein name to protein ID
+            if name:
+                if name not in self.name_to_ids:
+                    self.name_to_ids[name] = []
+                if protein_id not in self.name_to_ids[name]:
+                    self.name_to_ids[name].append(protein_id)
+                
+                # Also add name to identifier_to_ids for direct search
+                if name not in self.identifier_to_ids:
+                    self.identifier_to_ids[name] = []
+                if protein_id not in self.identifier_to_ids[name]:
+                    self.identifier_to_ids[name].append(protein_id)
         
         # Next, create mappings from UUID and other identifiers to protein IDs
         for _, row in self.protein_ids.iterrows():
             uuid = row['uuid']
             external_id = row.get('external_id')
+            name = row.get('name')
             
             # Map UUID to this external_id (protein ID)
             if external_id:
@@ -86,6 +106,17 @@ class DataLoader:
                 if external_id not in self.uuid_to_ids[uuid]:
                     self.uuid_to_ids[uuid].append(external_id)
             
+            # Map UUID to protein ID in identifier_to_ids
+            if uuid:
+                if uuid not in self.identifier_to_ids:
+                    self.identifier_to_ids[uuid] = []
+                
+                # Make sure we add both the UUID and external_id
+                if uuid.startswith('Protein::') and uuid not in self.identifier_to_ids[uuid]:
+                    self.identifier_to_ids[uuid].append(uuid)
+                if external_id and external_id not in self.identifier_to_ids[uuid]:
+                    self.identifier_to_ids[uuid].append(external_id)
+            
             # Map external_id back to itself for direct lookups
             if external_id:
                 if external_id not in self.identifier_to_ids:
@@ -93,9 +124,18 @@ class DataLoader:
                 if external_id not in self.identifier_to_ids[external_id]:
                     self.identifier_to_ids[external_id].append(external_id)
             
-            # Map UUID to itself for direct lookups
-            if uuid not in self.identifier_to_ids:
-                self.identifier_to_ids[uuid] = []
+            # Map name to protein ID if available
+            if name:
+                if name not in self.name_to_ids:
+                    self.name_to_ids[name] = []
+                if external_id and external_id not in self.name_to_ids[name]:
+                    self.name_to_ids[name].append(external_id)
+                
+                # Also add name to identifier_to_ids for direct search
+                if name not in self.identifier_to_ids:
+                    self.identifier_to_ids[name] = []
+                if external_id and external_id not in self.identifier_to_ids[name]:
+                    self.identifier_to_ids[name].append(external_id)
             
             # Add secondary identifiers if available
             if 'secondary_ids' in row and isinstance(row.get('secondary_ids'), list):
@@ -121,6 +161,8 @@ class DataLoader:
                 # If this protein ID is not in our lookup yet, add it
                 if protein_id not in self.identifier_to_ids:
                     self.identifier_to_ids[protein_id] = [protein_id]
+                elif protein_id not in self.identifier_to_ids[protein_id]:
+                    self.identifier_to_ids[protein_id].append(protein_id)
                 
                 # If we don't have details for this protein yet, create a minimal entry
                 if protein_id not in self.id_to_details:
@@ -139,9 +181,23 @@ class DataLoader:
         Returns:
             A list of protein IDs matching the identifier.
         """
-        # Direct lookup in our map
+        # Direct lookup in identifier_to_ids map
         if identifier in self.identifier_to_ids:
             return self.identifier_to_ids[identifier]
+        
+        # Try searching by name
+        if identifier in self.name_to_ids:
+            return self.name_to_ids[identifier]
+        
+        # Fallback to fuzzy matching on protein names if no exact match found
+        if len(identifier) >= 3:  # Only try fuzzy matching for longer strings
+            matches = []
+            for name, ids in self.name_to_ids.items():
+                if identifier.lower() in name.lower():
+                    matches.extend(ids)
+            
+            if matches:
+                return list(set(matches))  # Deduplicate
         
         # No matches found
         return []

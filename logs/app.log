@@ -32,3 +32,32 @@
 2025-05-21 13:05:27.291 | INFO     | src.app:<module>:31 - Initializing DataLoader...
 2025-05-21 13:05:31.320 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
 2025-05-21 13:05:48.943 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 13:21:23.037 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 13:21:28.103 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 13:21:52.752 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 13:22:51.122 | INFO     | src.app:perform_search:116 - Performing search: rsgnjter (type: protein)
+2025-05-21 13:22:54.866 | INFO     | src.app:perform_search:116 - Performing search: ATG (type: protein)
+2025-05-21 13:22:54.872 | INFO     | src.app:perform_search:124 - Found 5 proteins
+2025-05-21 13:22:55.576 | INFO     | src.app:view_protein_details:233 - Loading details for protein: UNIPROT_ACCESSION:A0A1P8ATG9
+2025-05-21 13:22:55.779 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 13:24:09.393 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 13:24:12.331 | INFO     | src.app:perform_search:116 - Performing search: GO:0004725 (type: protein)
+2025-05-21 13:24:45.618 | INFO     | src.app:perform_search:116 - Performing search: GO:0004725 (type: go_term)
+2025-05-21 13:24:45.750 | INFO     | src.app:perform_search:164 - Found 32 proteins for GO term
+2025-05-21 13:24:45.790 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::0625e429-5d38-59b7-a123-eb369af41212
+2025-05-21 13:24:46.141 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 14:14:02.516 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 14:14:10.597 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 14:15:11.772 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 14:15:37.267 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 14:15:41.681 | INFO     | src.app:perform_search:116 - Performing search: AT3G10940.1 (type: protein)
+2025-05-21 14:15:41.682 | INFO     | src.app:perform_search:124 - Found 1 proteins
+2025-05-21 14:15:42.057 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::0625e429-5d38-59b7-a123-eb369af41212
+2025-05-21 14:15:42.397 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 14:15:58.311 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 14:16:01.902 | INFO     | src.app:perform_search:116 - Performing search: AT4G17090.1 (type: protein)
+2025-05-21 14:16:01.902 | INFO     | src.app:perform_search:124 - Found 1 proteins
+2025-05-21 14:16:02.201 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::2137b991-d240-5d9a-9d8a-444a60ccb6a6
+2025-05-21 14:16:02.523 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 14:16:16.716 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 14:16:20.560 | INFO     | src.app:display_page:71 - Navigating to: /search
