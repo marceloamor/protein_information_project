@@ -2,8 +2,6 @@
 
 A web application for exploring protein information, including protein-protein interactions and Gene Ontology (GO) term annotations.
 
-![Protein Information Explorer](assets/favicon.ico)
-
 ## Overview
 
 The Protein Information Explorer allows researchers and biologists to:
