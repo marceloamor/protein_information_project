@@ -47,7 +47,7 @@ protein_information_project/
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/marceloamor/protein_information_project.git
    cd protein_information_project
    ```
 
@@ -70,7 +70,7 @@ protein_information_project/
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/marceloamor/protein_information_project.git
    cd protein_information_project
    ```
 
