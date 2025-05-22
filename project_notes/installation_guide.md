@@ -1,8 +1,8 @@
-# Protein Information Project - Installation Guide
+# Protein Information Explorer - Installation Guide
 
 ## Prerequisites
 
-- Python 3.9 or higher (Python 3.12 recommended)
+- Python 3.9 or higher (Python 3.12/3.13 recommended)
 - pip or Poetry package manager
 
 ## Option 1: Installation with Poetry (Recommended)
@@ -18,7 +18,12 @@
    curl -sSL https://install.python-poetry.org | python3 -
    ```
 
-3. **Install the dependencies using the helper script**:
+3. **Install the dependencies**:
+   ```bash
+   poetry install
+   ```
+
+   Alternatively, you can use the helper script:
    ```bash
    chmod +x install_dependencies.sh
    ./install_dependencies.sh
@@ -31,12 +36,12 @@
 
 5. **Verify installation**:
    ```bash
-   python run_test.py
+   python tests/exploratory/verify_search_fix.py
    ```
 
 6. **Run the application**:
    ```bash
-   ./run.py
+   python run.py
    ```
 
 ## Option 2: Installation with pip
@@ -54,7 +59,7 @@
 
 3. **Verify installation**:
    ```bash
-   python run_test.py
+   python tests/exploratory/verify_search_fix.py
    ```
 
 4. **Run the application**:
@@ -77,23 +82,20 @@ Ensure the data files are present in the `data/` directory:
 1. **DuckDB Installation Issues**:
    - If you're having trouble installing DuckDB, try:
      ```bash
-     pip install --force-reinstall duckdb
+     pip install --force-reinstall duckdb==1.2.0
      ```
 
-2. **PyArrow Compatibility**:
-   - If you encounter PyArrow compatibility issues, try:
-     ```bash
-     pip uninstall pyarrow
-     pip install pyarrow==14.0.1
-     ```
-
-3. **Poetry Environment Issues**:
+2. **Poetry Environment Issues**:
    - If Poetry cannot resolve dependencies, try:
      ```bash
      poetry update
      ```
+   - If you're using Python 3.13, ensure your pyproject.toml has:
+     ```toml
+     python = ">=3.9,<3.14"
+     ```
 
-4. **WSL-specific Issues**:
+3. **WSL-specific Issues**:
    - Some dependencies may require additional system packages on WSL:
      ```bash
      sudo apt-get update
@@ -114,7 +116,7 @@ If the data files are missing from the `data/` directory, you need to:
 ```bash
 # With Poetry (recommended)
 poetry shell
-./run.py
+python run.py
 
 # Without Poetry
 python run.py
@@ -124,16 +126,16 @@ python run.py
 
 ```bash
 # Run on a different port
-./run.py --port 8080
+python run.py --port 8080
 
 # Run in debug mode
-./run.py --debug
+python run.py --debug
 
 # Set custom log level
-./run.py --log-level DEBUG
+python run.py --log-level DEBUG
 
 # Combine options
-./run.py --port 8080 --debug --log-level DEBUG
+python run.py --port 8080 --debug --log-level DEBUG
 ```
 
 ### Accessing the Application:

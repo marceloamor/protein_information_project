@@ -1,7 +1,7 @@
-# Protein Information Project - Data Structure
+# Protein Information Explorer - Data Structure
 
 ## Overview
-This document describes the data structure of the parquet files used in the Protein Information Project. The data is organized into four main parquet files that represent a graph-like structure of proteins, GO terms, and their relationships.
+This document describes the data structure of the parquet files used in the Protein Information Explorer. The data is organized into four main parquet files that represent a graph-like structure of proteins, GO terms, and their relationships.
 
 ## Data Files
 
@@ -91,7 +91,27 @@ protein_id_records.parquet
 protein_nodes.parquet
 ```
 
-## Known Issues
+## Lookup Maps
+
+The DataLoader creates several lookup maps for efficient data access:
+
+1. **id_to_details**: Maps protein IDs to their details
+   - Key: Protein ID (e.g., "Protein::abb25e3e-02ba-569b-b459-56a70ef884c4")
+   - Value: Dictionary of protein details
+
+2. **uuid_to_ids**: Maps UUIDs to protein IDs
+   - Key: UUID (e.g., "Protein::0003eb56-eabe-57d3-b639-65c673c4f6b2")
+   - Value: List of protein IDs
+
+3. **identifier_to_ids**: Maps all identifiers to protein IDs
+   - Key: Any identifier (Protein ID, external ID, secondary ID)
+   - Value: List of protein IDs
+
+4. **name_to_ids**: Maps protein names to protein IDs
+   - Key: Protein name (e.g., "AT1G01010.1")
+   - Value: List of protein IDs
+
+## Known Issues and Solutions
 
 1. **Data Model Inconsistency**: Some protein IDs found in edges.parquet don't have corresponding records in protein_id_records.parquet. Example:
    ```
@@ -103,10 +123,16 @@ protein_nodes.parquet
    - Provide default minimal entries for proteins missing from protein_nodes
    - Allow searching and retrieving interactions for all proteins, even if they lack complete records
 
+3. **Search Functionality Fix**: We've implemented a robust search mechanism that:
+   - Handles different types of identifiers (IDs, names, external IDs)
+   - Provides fuzzy matching for partial name searches
+   - Properly maps protein IDs to their details
+
 ## Usage in the Application
 
 1. **Search Operations**:
-   - By protein ID/name: Uses the identifier_to_ids map
+   - By protein ID: Uses the identifier_to_ids map
+   - By protein name: Uses the name_to_ids map with fallback to fuzzy matching
    - By GO term: Searches go_term_nodes and follows edges to proteins
 
 2. **Detail Retrieval**:

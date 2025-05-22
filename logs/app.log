@@ -61,3 +61,78 @@
 2025-05-21 14:16:02.523 | INFO     | src.app:display_page:71 - Navigating to: /protein
 2025-05-21 14:16:16.716 | INFO     | src.app:display_page:71 - Navigating to: /
 2025-05-21 14:16:20.560 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-21 14:21:40.748 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 14:21:46.904 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 14:21:52.656 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-21 14:24:48.934 | INFO     | src.app:perform_search:116 - Performing search: AT4G17090.1 (type: protein)
+2025-05-21 14:24:48.934 | INFO     | src.app:perform_search:124 - Found 1 proteins
+2025-05-21 14:24:49.222 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::2137b991-d240-5d9a-9d8a-444a60ccb6a6
+2025-05-21 14:24:49.519 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 14:24:51.945 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 14:26:13.315 | INFO     | src.app:perform_search:116 - Performing search: AT4G17090.1 (type: protein)
+2025-05-21 14:26:13.315 | INFO     | src.app:perform_search:124 - Found 1 proteins
+2025-05-21 14:26:13.580 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::2137b991-d240-5d9a-9d8a-444a60ccb6a6
+2025-05-21 14:26:13.876 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 15:05:39.627 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-21 15:05:44.398 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-21 15:13:51.874 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 15:13:58.064 | INFO     | src.app:perform_search:116 - Performing search: response to cold (type: go_term)
+2025-05-21 15:14:55.308 | INFO     | src.app:perform_search:116 - Performing search: GO:0004725 (type: go_term)
+2025-05-21 15:14:56.060 | INFO     | src.app:perform_search:164 - Found 32 proteins for GO term
+2025-05-21 15:14:56.338 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::0625e429-5d38-59b7-a123-eb369af41212
+2025-05-21 15:14:57.010 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 16:03:11.902 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 16:03:15.117 | INFO     | src.app:perform_search:116 - Performing search: Phosphoglucan phosphatase LSF2, chloroplastic (type: protein)
+2025-05-21 16:03:27.170 | INFO     | src.app:perform_search:116 - Performing search: chloroplastic (type: go_term)
+2025-05-21 16:03:35.209 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 16:03:48.116 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 16:03:51.897 | INFO     | src.app:perform_search:116 - Performing search: GO:0016311 (type: protein)
+2025-05-21 16:03:54.726 | INFO     | src.app:perform_search:116 - Performing search: GO:0016311 (type: go_term)
+2025-05-21 16:03:56.300 | INFO     | src.app:perform_search:164 - Found 37 proteins for GO term
+2025-05-21 16:03:56.355 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::03797d6e-e96c-522a-9041-0d499524728b
+2025-05-21 16:03:57.297 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 16:27:52.815 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:01:31.040 | INFO     | src.app:perform_search:116 - Performing search: LSF2 (type: protein)
+2025-05-21 17:01:31.297 | INFO     | src.app:perform_search:124 - Found 1 proteins
+2025-05-21 17:01:32.806 | INFO     | src.app:view_protein_details:233 - Loading details for protein: UNIPROT_ACCESSION:Q9LSF2
+2025-05-21 17:01:33.008 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:54:20.628 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:54:25.865 | INFO     | src.app:perform_search:116 - Performing search: trpA (type: protein)
+2025-05-21 17:54:33.326 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:54:37.177 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:54:37.802 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:54:39.228 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:54:39.707 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-21 17:54:44.066 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:54:46.669 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-21 17:54:47.207 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:54:49.885 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-21 17:54:50.212 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:54:51.029 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:54:51.565 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:54:52.057 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:54:52.463 | INFO     | src.app:display_page:71 - Navigating to: /about
+2025-05-21 17:54:52.893 | INFO     | src.app:display_page:71 - Navigating to: /search
+2025-05-21 17:54:54.245 | INFO     | src.app:display_page:71 - Navigating to: /about
+2025-05-21 17:58:31.612 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:58:34.132 | INFO     | src.app:perform_search:116 - Performing search: Protein::abb25e3e-02ba-569b-b459-56a70ef884c4 (type: protein)
+2025-05-21 17:58:34.134 | INFO     | src.app:perform_search:124 - Found 2 proteins
+2025-05-21 17:58:36.621 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::abb25e3e-02ba-569b-b459-56a70ef884c4
+2025-05-21 17:58:36.880 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 17:59:22.956 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 17:59:25.895 | INFO     | src.app:perform_search:116 - Performing search: Protein::abb25e3e-02ba-569b-b459-56a70ef884c4 (type: protein)
+2025-05-21 17:59:25.895 | INFO     | src.app:perform_search:124 - Found 2 proteins
+2025-05-21 17:59:26.219 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::abb25e3e-02ba-569b-b459-56a70ef884c4
+2025-05-21 17:59:26.485 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 18:02:40.830 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 18:02:44.036 | INFO     | src.app:perform_search:116 - Performing search: AT1G01010.1 (type: protein)
+2025-05-21 18:02:44.037 | INFO     | src.app:perform_search:124 - Found 1 proteins
+2025-05-21 18:02:44.242 | INFO     | src.app:view_protein_details:233 - Loading details for protein: Protein::abb25e3e-02ba-569b-b459-56a70ef884c4
+2025-05-21 18:02:44.441 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-21 18:04:25.873 | INFO     | src.app:display_page:71 - Navigating to: /
+2025-05-21 18:04:34.442 | INFO     | src.app:perform_search:116 - Performing search: NTL10 (type: protein)
+2025-05-21 18:05:34.602 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-22 08:49:45.187 | INFO     | src.app:<module>:31 - Initializing DataLoader...
+2025-05-22 08:49:52.373 | INFO     | src.app:<module>:34 - DataLoader initialized successfully. Proteins: 27768, GO Terms: 9594, Edges: 498731
+2025-05-22 08:52:08.320 | INFO     | src.app:display_page:71 - Navigating to: /protein
+2025-05-22 09:03:53.992 | INFO     | src.app:display_page:71 - Navigating to: /protein

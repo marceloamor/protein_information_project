@@ -125,7 +125,7 @@ def perform_search(n_clicks, search_term, search_type):
             
             # Create result cards
             result_cards = []
-            for i, protein_id in enumerate(results[:10]):  # Limit to 10 results
+            for i, protein_id in enumerate(results[:20]):  # Limit to 20 results
                 protein_details = loader.get_protein_details(protein_id)
                 card = dbc.Card(
                     [
@@ -165,7 +165,7 @@ def perform_search(n_clicks, search_term, search_type):
             
             # Create result cards for proteins associated with this GO term
             result_cards = []
-            for i, protein in enumerate(go_results[:10]):  # Limit to 10 results
+            for i, protein in enumerate(go_results[:20]):  # Limit to 20 results
                 protein_id = protein.get("protein_id")
                 card = dbc.Card(
                     [
